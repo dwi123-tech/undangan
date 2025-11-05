@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ban">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Mepandes - I Made Dwi Cahya Putra</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo" style="font-weight: 900;"> Saking Dwi </div>
+    <div class="nav-links">
+      <a href="#" id="guestListBtn">Home</a>
+      <a href="tel:+628123456789">Kontak</a>
+    </div>
+  </nav>
+
+  <section class="hero fade-in">
+    <h1>Om Swastyastu</h1>
+    <p>Suksma sampun ngametuangang kartu undangan puniki, mangda ngalih ring daptar yening wenten asané kasurat. Yening sampun kalaksanayang, mangda ngelantur ring sesolahan utawi ajengan langkung lanjut.
+    </p>
+    <h2>UNDANGAN METATAH (MEPANDES)</h2>
+    <button id="viewInvite">Lihat Undangan</button>
+  </section>
+
+  <div class="transition-overlay"></div>
+
+  <script>
+    const viewInvite = document.getElementById("viewInvite");
+    const overlay = document.querySelector(".transition-overlay");
+
+    viewInvite.addEventListener("click", () => {
+      overlay.classList.add("active");
+      setTimeout(() => {
+        window.location.href = "daftar.html"; // Ganti sesuai nama file undangan
+      }, 700); // waktu transisi (ms)
+    });
+  </script>
+</body>
+</html>

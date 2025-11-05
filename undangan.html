@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ban">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Metatah - I Made Dwi Cahya Putra</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in">
+
+  <div class="container">
+    <div class="om">🌸 Om Swastyastu 🌸</div>
+
+    <p>
+      Antuk asung kerta wara nugraha Ida Sang Hyang Widhi Wasa miwah para leluhur sane sampun ngemargiang kerahayuan ring titiang sekeluarga.  
+      titiang <strong>I Made Dwi Cahya Putra</strong> ngaturang suksma ring
+      <strong id="guestName">Bapak/Ibu</strong>, dumogi prasida rauh ring upacara 
+      <span class="highlight">Metatah (Mepandes)</span> sane dados kalaksanayang.
+    </p>
+
+    <div class="divider"></div>
+
+    <p>
+      Upacara puniki kalaksanayang ring:<br />
+      📅 <strong>Saniscara, 7 November 2025</strong><br />
+      🕘 <strong>09:00 Wita</strong><br />
+      📍 Ring griya titiang: <strong>Perumahan Griya Sambangan, Babakan / Desa Sambangan</strong>
+    </p>
+
+    <p>
+      Saking keluarga:<br />
+      <strong>I Made Kusuma Wijaya & Desak Nyoman Purniati</strong><br />
+    </p>
+
+    <p>
+      Antuk kehadiran sareng pangastuti <span id="guestName3">Bapak/Ibu</span> dados pangreksan rahayu ring titiang sekeluarga.
+    </p>
+
+    <h3>Om Shanti Shanti Shanti Om</h3>
+
+    <div class="footer">
+      Saking titiang sareng keluarga<br />
+      <strong>I Made Dwi Cahya Putra</strong><br /><br />
+      *Ngaturang suksma ring pangapunapi, kirang langkung titiang nunas pengampura.*
+    </div>
+
+    <button id="backHome">Ngulang Saking Daptar Undangan</button>
+  </div>
+
+  <div class="transition-overlay"></div>
+
+<script>
+  // ambil parameter nama dari URL
+  const params = new URLSearchParams(window.location.search);
+  const guest = params.get("to");
+
+  // isi teks nama penerima
+  if (guest) {
+    document.getElementById("guestName").textContent = guest;
+    document.getElementById("guestName3").textContent = guest;
+  }
+
+  // tombol kembali dengan transisi
+  const backBtn = document.getElementById("backHome");
+  const overlay = document.querySelector(".transition-overlay");
+
+  backBtn.addEventListener("click", () => {
+    overlay.classList.add("active");
+    setTimeout(() => {
+      window.location.href = "daftar.html";
+    }, 500);
+  });
+</script>
+</body>
+</html>

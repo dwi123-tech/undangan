@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar Undangan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in">
+  <nav class="navbar">
+    <div class="logo" style="font-weight:900;">📜 Daftar Undangan</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tel:+628123456789">Kontak</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Undangan</h1>
+
+    <div class="nama-undangan" style="margin-top:30px;">
+      <button class="guest-btn" onclick="goToInvite('Bapak Guru Herry Mahendrawan')">I Gede Herry Mahendrawan</button><br><br>
+      <button class="guest-btn" onclick="goToInvite('Made Aditya Darmawan')">Made Aditya Darmawan</button><br><br>
+      <button class="guest-btn" onclick="goToInvite('I Made Dwi Darmawan')">I Made Dwi Darmawan</button><br><br>
+      <button class="guest-btn" onclick="goToInvite('Made Dynasti Pranata')">Made Dynasti Pranata</button>
+    </div>
+  </section>
+
+  <div class="transition-overlay"></div>
+
+  <script>
+    // efek transisi + kirim nama ke URL
+    function goToInvite(name) {
+      const overlay = document.querySelector(".transition-overlay");
+      overlay.classList.add("active");
+      setTimeout(() => {
+        window.location.href = `undangan.html?to=${encodeURIComponent(name)}`;
+      }, 700);
+    }
+  </script>
+</body>
+</html>
