@@ -6,7 +6,12 @@
 }
 
 body {
+  background-image: url(assets/bg4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   background-color: #fffaf4;
+  background-repeat: no-repeat;
   color: #3e2f2f;
   overflow-x: hidden;
 }
@@ -25,7 +30,7 @@ body {
 .nav-links a {
   color: #3e2f2f;
   text-decoration: none;
-  margin: 0 30px;
+  margin: 0 12px;
   font-weight: 800;
 }
 
@@ -55,7 +60,7 @@ body {
 
 .hero p {
   font-size: 1.1em;
-  margin-top: 15px;
+  margin: 15px 10px;
   color: #5a4a42;
 }
 
@@ -68,9 +73,9 @@ body {
 .hero button {
   margin-top: 30px;
   padding: 12px 24px;
-  border: none;
+  border: 1.5px solid rgb(96, 75, 49);
   border-radius: 30px;
-  background-color: #a37537;
+  background-color: #b48b56;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
@@ -192,10 +197,9 @@ p {
 
 .guest-btn {
   background-color: #a37537;
-  width: 90%;
+  width: 75%;
   height: 5rem;
   color: white;
-  border: 2px solid #5b3f1a;
   border-radius: 25px;
   font-size: 1rem;
   padding: 1px 1px;
