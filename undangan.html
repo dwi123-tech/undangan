@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan Metatah - I Made Dwi Cahya Putra</title>
+  <title>Undangan Metatah</title>
 
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
@@ -57,17 +57,14 @@
   <div class="transition-overlay"></div>
 
 <script>
-  // ambil parameter nama dari URL
   const params = new URLSearchParams(window.location.search);
   const guest = params.get("to");
 
-  // isi teks nama penerima
   if (guest) {
     document.getElementById("guestName").textContent = guest;
     document.getElementById("guestName3").textContent = guest;
   }
 
-  // tombol kembali dengan transisi
   const backBtn = document.getElementById("backHome");
   const overlay = document.querySelector(".transition-overlay");
 
